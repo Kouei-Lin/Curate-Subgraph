@@ -1,1 +1,1 @@
-# Python script to query curate subgraph
+# Python scripts for querying subgraphs
