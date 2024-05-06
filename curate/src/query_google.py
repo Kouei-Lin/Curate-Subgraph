@@ -74,6 +74,24 @@ class Subgraph:
 
         return items
 
+def extract_chain_and_address(row):
+    address = row['key0']
+    if address is None:
+        chain_id = None
+    elif 'eip155' in address:
+        parts = address.split(':')
+        if len(parts) >= 3:
+            chain_id = parts[-2]
+            address = parts[-1]
+        else:
+            chain_id = None
+    elif 'solana' in address:
+        chain_id = 'solana'
+        address = address.split(':')[-1]  # Extract address for Solana
+    else:
+        chain_id = None
+    return pd.Series({'chain_id': chain_id, 'address': address})
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -105,6 +123,12 @@ for registry_name, registry_address in registry_addresses.items():
 
     # Convert data to DataFrame
     df = pd.DataFrame(all_registry_data)
+
+    # Extract chain_id and address
+    df[['chain_id', 'address']] = df.apply(extract_chain_and_address, axis=1)
+
+    # Reorder columns
+    df = df[['chain_id', 'address', 'key1', 'key2', 'key3']]
 
     # Write DataFrame to Google Sheet
     google_sheets.write_to_google_sheet(df, registry_name, spreadsheet_id)
