@@ -36,7 +36,7 @@ def get_court_data():
         return []
 
 def write_to_csv(data):
-    csv_file_path = 'gnosis.csv'
+    csv_file_path = '../data/gnosis.csv'
     fieldnames = ['parentID', 'subcourtID', 'tokenStaked']
 
     with open(csv_file_path, 'w', newline='') as csvfile:

@@ -67,7 +67,7 @@ def fetch_data_for_registry(registry_address):
     return items
 
 def save_to_csv(registry_name, data):
-    filename = f"{registry_name}.csv"
+    filename = f"../data/{registry_name}.csv"
     with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=['address', 'key1', 'key2', 'key3'])
         writer.writeheader()
