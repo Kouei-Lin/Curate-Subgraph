@@ -69,16 +69,14 @@ def fetch_data_for_registry(registry_address):
 def save_to_csv(registry_name, data):
     filename = f"{registry_name}.csv"
     with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=['chain_id', 'address', 'key1', 'key2', 'key3'])
+        writer = csv.DictWriter(csvfile, fieldnames=['address', 'key1', 'key2', 'key3'])
         writer.writeheader()
         for item in data:
-            chain_id = item['key0']  # Use key0 as chain_id
-            address = item['key1']  # Extract address from key1
-            item['chain_id'] = chain_id
-            item['address'] = address
-            del item['key0']  # Remove the original key0 column
-            del item['key1']  # Remove the original key1 column
-            writer.writerow(item)
+            address = item['key0']  # Use key0 as the address
+            key1 = item['key1']
+            key2 = item['key2']
+            key3 = item['key3']
+            writer.writerow({'address': address, 'key1': key1, 'key2': key2, 'key3': key3})
 
 # Loop through each registry address
 for registry_name, registry_address in registry_addresses.items():
