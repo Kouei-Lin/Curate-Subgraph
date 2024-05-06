@@ -24,7 +24,7 @@ load_dotenv()
 api_key = os.getenv('API_KEY')
 
 # Define the subgraph URL
-subgraph_url = 'https://gateway-arbitrum.network.thegraph.com/api/subgraphs/id/ECENsJRfqi6Mwj6kF9diShPzFKkgyyo79aSCkSwAShHL'
+subgraph_url = 'https://gateway-arbitrum.network.thegraph.com/api/subgraphs/id/xxxxxxx'
 
 # Define the GraphQL query
 query = """
