@@ -2857,6 +2857,7 @@ chain_id,address,key1,key2,key3
 250,0xa48d959ae2e88f1daa7d5f611e01908106de7598,xBOO Token,SpookySwap,https://spooky.fi/
 42161,0x4c4AF8DBc524681930a27b2F1Af5bcC8062E6fB7,Woo Router V2,WOO,https://woo.org/
 324,0x787c09494Ec8Bcb24DcAf8659E7d5D69979eE508,MAV Token,Maverick Protocol,https://www.mav.xyz/
+1,0x27C70Cd1946795B66be9d954418546998b546634,LEASH Token,Shiba Inu,https://www.shibatoken.com/
 ,,,,
 ,,,,
 ,,,,
@@ -2879,3 +2880,68 @@ chain_id,address,key1,key2,key3
 10,0x27428DD2d3DD32A4D7f7C497eAaa23130d894911,Standard Relayer,Wormhole,https://wormhole.com/
 8453,0x706F82e9bb5b0813501714Ab5974216704980e31,Standard Relayer,Wormhole,https://wormhole.com/
 solana,hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux,HNT,Helium Network,https://www.helium.com/
+1,0x888888888889758F76e7103c6CbF23ABbF58F946,Router V4,Pendle,https://www.pendle.finance/
+1,0xBA61F25dd9f2d5f02D01B1C2c1c5F0B14c4B48A3,L1 Standard Bridge Proxy,Karak,https://karak.network/
+1,0x2e1a7EF12d0aDeEbF6009F0Aa964cf686364B01f,Renzo Airdrop,Liquifi,https://renzo.liquifi.finance/
+10,0xFAf8FD17D9840595845582fCB047DF13f006787d,Voting Escrow V2,Velodrome Finance,https://velodrome.finance/
+100,0x222228060E7Efbb1D78BB5D454581910e3922222,Refuel,L2Pass.com,https://l2pass.com/
+56,0x222228060E7Efbb1D78BB5D454581910e3922222,Refuel,L2Pass.com,https://l2pass.com/
+42161,0x222228060E7Efbb1D78BB5D454581910e3922222,Refuel,L2Pass.com,https://l2pass.com/
+250,0x222228060E7Efbb1D78BB5D454581910e3922222,Refuel,L2Pass.com,https://l2pass.com/
+10,0x222228060E7Efbb1D78BB5D454581910e3922222,Refuel,L2Pass.com,https://l2pass.com/
+8453,0x222228060E7Efbb1D78BB5D454581910e3922222,Refuel,L2Pass.com,https://l2pass.com/
+100,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis,L2Pass.com,https://l2pass.com/
+10,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis,L2Pass.com,https://l2pass.com/
+56,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis,L2Pass.com,https://l2pass.com/
+250,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis (deprecated),L2Pass.com,https://l2pass.com/
+8453,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis,L2Pass.com,https://l2pass.com/
+42220,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis (deprecated),L2Pass.com,https://l2pass.com/
+42161,0x0000049F63Ef0D60aBE49fdD8BEbfa5a68822222,Mememorphosis,L2Pass.com,https://l2pass.com/
+324,0x8582525114212C2815F13d96Ed5158553287a166,Mememorphosis,L2Pass.com,https://l2pass.com/
+8453,0x1195Cf65f83B3A5768F3C496D3A05AD6412c64B7,CUBE Proxy,Layer3,https://layer3.xyz/
+8453,0x47fbe95e981C0Df9737B6971B451fB15fdC989d9,Mail Executor,Dmail Network,https://dmail.ai/
+10,0x64812F1212f6276068A0726f4695a6637DA3E4F8,Mail Executor,Dmail Network,https://dmail.ai/
+56,0xE3bA0072d1da98269133852fba1795419D72BaF4,Daily Sign In,StarryNift,https://starrynift.art/
+8453,0x0389879e0156033202C44BF784ac18fC02edeE4f,Route Processor 4,SushiSwap,https://www.sushi.com/
+1,0xAacfdF323B44d8B27319249cA3ee1B3Aa05083b2,PalioAI Gen0 Whitelist Minter,Palio,https://www.palio.ai/
+1,0xb6D149C8DdA37aAAa2F8AD0934f2e5682C35890B,STALT Token Proxy,AltLayer,https://altlayer.io/
+42161,0x888888888889758F76e7103c6CbF23ABbF58F946,Router V4,Pendle,https://www.pendle.finance/
+42161,0x544bA588efD839d2692Fc31EA991cD39993c135F,Route Processor 4,SushiSwap,https://www.sushi.com/
+43114,0xCdBCd51a5E8728E0AF4895ce5771b7d17fF71959,Route Processor 4,SushiSwap,https://www.sushi.com/
+56,0x33d91116e0370970444B0281AB117e161fEbFcdD,Route Processor 4,SushiSwap,https://www.sushi.com/
+1,0xe43ca1Dee3F0fc1e2df73A0745674545F11A59F5,Route Processor 4,SushiSwap,https://www.sushi.com/
+324,0x240D5645bFFAF6f8Bc3586e459A4155F270BCb3b,Manager Diamond,Derivio,https://derivio.xyz/
+8453,0xA61BeB4A3d02decb01039e378237032B351125B4,EURA Token,Angle Protocol,https://www.angle.money/
+56,0x12f31B73D812C6Bb0d735a218c086d44D5fe5f89,EURA Token,Angle Protocol,https://www.angle.money/
+43114,0xAEC8318a9a59bAEb39861d10ff6C7f7bf1F96C57,EURA Token,Angle Protocol,https://www.angle.money/
+1,0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8,EURA Token,Angle Protocol,https://www.angle.money/
+8453,0x0bD4887f7D41B35CD75DFF9FfeE2856106f86670,FRIEND Token,friend.tech,https://www.friend.tech/
+8453,0xFF0C532FDB8Cd566Ae169C1CB157ff2Bdc83E105,Fren Pet Token,Fren Pet,https://frenpet.xyz/
+10,0x00000000fcCe7f938e7aE6D3c335bD6a1a7c593D,Storage Registry,Farcaster,https://www.farcaster.xyz/
+10,0x00000000fC56947c7E7183f8Ca4B62398CaAdf0B,Key Gateway,Farcaster,https://www.farcaster.xyz/
+10,0x00000000Fc25870C6eD6b6c7E41Fb078b7656f69,Id Gateway,Farcaster,https://www.farcaster.xyz/
+1,0xC14d550632db8592D1243Edc8B95b0Ad06703867,Fraxswap Router V2,Frax Finance,https://frax.finance/
+42161,0xCAAaB0A72f781B92bA63Af27477aA46aB8F653E7,Fraxswap Router V2,Frax Finance,https://frax.finance/
+56,0xb4315e873dBcf96Ffd0acd8EA43f689D8c20fB30,LBRouter v2.1,Trader Joe,https://traderjoexyz.com/
+42161,0xAA277CB7914b7e5514946Da92cb9De332Ce610EF,Nonfungible Position Manager,Ramses,https://www.ramses.exchange/
+250,0x6AB0CA9c94FDE313a3A1d34A8247ae6065Bd2E73,FTM Universal Router,SpookySwap,https://spooky.fi/
+10,0xcb1355ff08ab38bbce60111f1bb2b784be25d7e8,Universal Router V1 2 V2 Support,Uniswap,https://uniswap.org/
+324,0xCb84d512F0C9943D3BC6B4Be8801aC8Aa6621a54,Vote,RubyScore,https://rubyscore.io/
+8453,0xe10Add2ad591A7AC3CA46788a06290De017b9fB4,Vote,RubyScore,https://rubyscore.io/
+10,0xB9A55F455e46e8D717eEA5E47D2c449416A0437F,Fraxswap Router V2,Frax Finance,https://frax.finance/
+43114,0x5977b16AA9aBC4D1281058C73B789C65Bf9ab3d3,Fraxswap Router V2,Frax Finance,https://frax.finance/
+8453,0xBf250AE227De43deDaF01ccBFD8CC83027efc1E2,Rabbit Router,friend.tech,https://www.friend.tech/
+8453,0x201e95f275F39a5890C976Dc8A3E1b4Af114E635,Clubs,friend.tech,https://www.friend.tech/
+8453,0x1349A9DdEe26Fe16D0D44E35B3CB9B0CA18213a4,Merkle Distributor,Mint Club,https://mint.club/
+1,0x87869a9789291a6cec99f3c3ef2ff71fceb12a8e,CMOS Token,CoinMerge OS,https://app.coinmerge.io/
+1,0xe9b076b476d8865cdf79d1cf7df420ee397a7f75,FUND Token,Unification,https://www.unification.com/
+1,0x4be2b2c45b432ba362f198c08094017b61e3bdc6,MSWAP Token,Marswap,https://marswap.exchange/
+1,0xfb7b4564402e5500db5bb6d63ae671302777c75a,DEXT Token,DEXTools,https://info.dextools.io/
+1,0xb9f599ce614feb2e1bbe58f180f370d05b39344e,PORK Token,PepeFork,https://www.pond0x.com/
+324,0x9002ecb8a06060e3b56669c6B8F18E1c3b119914,z0WETH Token,ZeroLend,https://zerolend.xyz/
+1,0xb23d80f5fefcddaa212212f028021b41ded428cf,PRIME Token,Echelon Prime Foundation,https://echelon.io/
+8453,0xfA980cEd6895AC314E7dE34Ef1bFAE90a5AdD21b,PRIME Token,Echelon Prime Foundation,https://echelon.io/
+8453,0xE3B53AF74a4BF62Ae5511055290838050bf764Df,STG token,Stargate Finance,https://stargate.finance/
+42161,0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8,GRAIL Token,Camelot Exchange,https://camelot.exchange/
+56,0x0Eb3a705fc54725037CC9e008bDede697f62F335,Cosmos Token,Binance,https://www.binance.com/
+56,0xe91a8D2c584Ca93C7405F15c22CdFE53C29896E3,DEXT Token,DEXTools,https://www.dextools.io/

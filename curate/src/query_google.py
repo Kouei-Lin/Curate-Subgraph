@@ -97,8 +97,8 @@ load_dotenv()
 
 # Define environment variables
 creds_path = os.getenv('GOOGLE_AUTH_JSON_PATH')
-spreadsheet_id = os.getenv('SPREADSHEET_ID')
-api_key = os.getenv('API_KEY')
+spreadsheet_id = os.getenv('SPREADSHEET_ID1')
+api_key = os.getenv('GRAPH_API_KEY')
 subgraph_endpoint = 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/2mi5zidQdekNdS6ojDj4tnKZe9MiKcseWQGAguTwcvBV'
 
 # Instantiate GoogleSheets and Subgraph classes

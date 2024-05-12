@@ -71,7 +71,7 @@ def extract_chain_and_address(row):
 load_dotenv()
 
 # Define environment variables
-api_key = os.getenv('API_KEY')
+api_key = os.getenv('GRAPH_API_KEY')
 subgraph_endpoint = 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/2mi5zidQdekNdS6ojDj4tnKZe9MiKcseWQGAguTwcvBV'
 
 # Define registry addresses
