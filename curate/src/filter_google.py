@@ -32,7 +32,7 @@ filtered_curate_list = filtered_curate_list.drop(columns=["_merge"]).reset_index
 
 # Authenticate with Google Sheets
 creds_path = os.getenv('GOOGLE_AUTH_JSON_PATH')
-spreadsheet_id = os.getenv('SPREADSHEET_ID2')
+spreadsheet_id = os.getenv('SPREADSHEET_ID')
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name(creds_path, scope)
