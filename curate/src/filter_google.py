@@ -7,13 +7,28 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Get the paths for the CSV files from the environment variables
+# Function to write DataFrame to Google Sheet
+def write_to_google_sheet(dataframe, sheet_name, gc, spreadsheet_id):
+    try:
+        spreadsheet = gc.open_by_key(spreadsheet_id)
+        worksheet = spreadsheet.worksheet(sheet_name)
+    except gspread.exceptions.WorksheetNotFound:
+        # If the sheet doesn't exist, create a new one
+        worksheet = spreadsheet.add_worksheet(title=sheet_name, rows=1000, cols=10)
+    
+    # Replace NaN values with an empty string
+    dataframe = dataframe.fillna('')
+    
+    # Update the worksheet with the DataFrame data
+    worksheet.clear()
+    worksheet.update([dataframe.columns.values.tolist()] + dataframe.values.tolist())
+
+# Read the CSV files
 output_dir = os.getenv("OUTPUT_DIR")
 curate_list_path = os.path.join(output_dir, "raw_list.csv")
 atr_path = os.path.join(output_dir, "atr.csv")
 hit_list_path = os.path.join(output_dir, "hit_list.csv")
 
-# Read the CSV files
 curate_list = pd.read_csv(curate_list_path)
 atr = pd.read_csv(atr_path)
 
@@ -37,22 +52,6 @@ spreadsheet_id = os.getenv('SPREADSHEET_ID')
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name(creds_path, scope)
 gc = gspread.authorize(credentials)
-
-# Write DataFrame to Google Sheet
-def write_to_google_sheet(dataframe, sheet_name, gc, spreadsheet_id):
-    try:
-        spreadsheet = gc.open_by_key(spreadsheet_id)
-        worksheet = spreadsheet.worksheet(sheet_name)
-    except gspread.exceptions.WorksheetNotFound:
-        # If the sheet doesn't exist, create a new one
-        worksheet = spreadsheet.add_worksheet(title=sheet_name, rows=1000, cols=10)
-    
-    # Replace NaN values with an empty string
-    dataframe = dataframe.fillna('')
-    
-    # Update the worksheet with the DataFrame data
-    worksheet.clear()
-    worksheet.update([dataframe.columns.values.tolist()] + dataframe.values.tolist())
 
 # Write filtered_curate_list to Google Sheet
 write_to_google_sheet(filtered_curate_list, "hit_list", gc, spreadsheet_id)

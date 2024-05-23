@@ -1,66 +1,39 @@
 import os
+import requests
 import pandas as pd
-from dotenv import load_dotenv
 from dune_client.types import QueryParameter
 from dune_client.client import DuneClient
 from dune_client.query import QueryBase
 
-# Load environment variables from .env file
-load_dotenv()
+class Dune:
+    def __init__(self, blockchains, output_dir, query_id, creds_path):
+        self.blockchains = blockchains
+        self.output_dir = output_dir
+        self.query_id = query_id
+        self.creds_path = creds_path
 
-# Define the query ID
-query_id = 3713189
+    def run_query(self):
+        load_dotenv()  # If not already loaded
+        dune_api_key = os.getenv("DUNE_API_KEY")
+        dune = DuneClient(api_key=dune_api_key)
 
-# Define the blockchains and their corresponding chain IDs
-blockchains = {
-    "ethereum": "1",
-    "arbitrum": "42161",
-    "optimism": "10",
-    "base": "8453",
-    "gnosis": "100",
-    "bnb": "56",
-    "fantom": "250",
-    "avalanche_c": "43113",
-    "zksync": "324",
-    "celo": "42220",
-}
+        for blockchain, chain_id in self.blockchains.items():
+            params = [
+                QueryParameter.text_type(name="blockchain", value=blockchain),
+                QueryParameter.text_type(name="chain_id", value=chain_id),
+            ]
 
-# Define the filename for saving the CSV file
-output_dir = os.getenv("OUTPUT_DIR")
-csv_filename = os.path.join(output_dir, "raw_list.csv")
+            query = QueryBase(
+                name=f"Query for {blockchain}",
+                query_id=self.query_id,
+                params=params,
+            )
 
-# Remove the existing CSV file if it exists
-if os.path.exists(csv_filename):
-    os.remove(csv_filename)
-    print("Existing CSV file removed.")
+            print(f"Running query for {blockchain}...")
+            results_df = dune.run_query_dataframe(query)
+            
+            mode = 'a' if os.path.exists(self.output_dir) else 'w'
+            results_df.to_csv(self.output_dir, mode=mode, index=False, header=mode=='w')
 
-# Initialize DuneClient with the API key loaded from environment variables
-dune_api_key = os.getenv("DUNE_API_KEY")
-dune = DuneClient(api_key=dune_api_key)
-
-# Loop over each blockchain
-for blockchain, chain_id in blockchains.items():
-    # Define the query parameters
-    params = [
-        QueryParameter.text_type(name="blockchain", value=blockchain),
-        QueryParameter.text_type(name="chain_id", value=chain_id),
-    ]
-    
-    # Define the query
-    query = QueryBase(
-        name=f"Query for {blockchain}",
-        query_id=query_id,
-        params=params,
-    )
-    
-    print(f"Running query for {blockchain}...")
-    
-    # Run the query and get results
-    results_df = dune.run_query_dataframe(query)
-    
-    # Append the results to the CSV file
-    mode = 'a' if os.path.exists(csv_filename) else 'w'
-    results_df.to_csv(csv_filename, mode=mode, index=False, header=mode=='w')
-
-print("Results saved to", csv_filename)
+            print("Results saved to", self.output_dir)
 
