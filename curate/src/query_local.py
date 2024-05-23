@@ -22,7 +22,7 @@ class Subgraph:
                 skip: {offset}
                 where: {{
                   registryAddress: "{registry_address}",
-                  status: Registered
+                  status_in: ["Registered", "RegistrationRequested"]
                 }}
               ) {{
                 key0
