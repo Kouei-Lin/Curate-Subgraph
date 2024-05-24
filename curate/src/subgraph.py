@@ -47,21 +47,21 @@ class Subgraph:
 
         return items
 
-    def extract_chain_and_address(self, row):
-        address = row['key0']
-        if address is None:
-            chain_id = None
-        elif 'eip155' in address:
-            parts = address.split(':')
-            if len(parts) >= 3:
-                chain_id = parts[-2]
-                address = parts[-1]
-            else:
-                chain_id = None
-        elif 'solana' in address:
-            chain_id = 'solana'
-            address = address.split(':')[-1]  # Extract address for Solana
+def extract_chain_and_address(row):
+    address = row['key0']
+    if address is None:
+        chain_id = None
+    elif 'eip155' in address:
+        parts = address.split(':')
+        if len(parts) >= 3:
+            chain_id = parts[-2]
+            address = parts[-1]
         else:
             chain_id = None
-        return pd.Series({'chain_id': chain_id, 'address': address})
+    elif 'solana' in address:
+        chain_id = 'solana'
+        address = address.split(':')[-1]  # Extract address for Solana
+    else:
+        chain_id = None
+    return pd.Series({'chain_id': chain_id, 'address': address})
 

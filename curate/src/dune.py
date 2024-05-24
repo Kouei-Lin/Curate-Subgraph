@@ -4,6 +4,7 @@ import pandas as pd
 from dune_client.types import QueryParameter
 from dune_client.client import DuneClient
 from dune_client.query import QueryBase
+from dotenv import load_dotenv
 
 class Dune:
     def __init__(self, blockchains, output_dir, query_id, creds_path):
@@ -13,7 +14,7 @@ class Dune:
         self.creds_path = creds_path
 
     def run_query(self):
-        load_dotenv()  # If not already loaded
+        load_dotenv()  # Load environment variables
         dune_api_key = os.getenv("DUNE_API_KEY")
         dune = DuneClient(api_key=dune_api_key)
 
