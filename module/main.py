@@ -10,7 +10,7 @@ load_dotenv()
 
 # Define environment variables
 api_key = os.getenv('GRAPH_API_KEY')
-subgraph_endpoint = 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/2mi5zidQdekNdS6ojDj4tnKZe9MiKcseWQGAguTwcvBV'
+subgraph_endpoint = os.getenv('SUBGRAPH_ENDPOINT')
 query_file_path = os.getenv('QUERY_FILE_PATH')
 output_csv_file = os.getenv('OUTPUT_FILE_PATH')
 
