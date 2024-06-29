@@ -3,7 +3,7 @@
 import os
 import csv
 from dotenv import load_dotenv
-from graphquery import GraphQuery
+from module.graphquery import GraphQuery
 
 # Load environment variables from .env file
 load_dotenv()
