@@ -1,0 +1,16 @@
+query {
+  litems(
+    orderBy: latestRequestSubmissionTime
+    first: 1000
+    where: {
+      registryAddress: "0x66260c69d03837016d88c9877e61e08ef74c59f2"
+      status: Registered
+    }
+  ) {
+    key0
+    key1
+    key2
+    key3
+  }
+}
+
